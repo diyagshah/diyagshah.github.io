@@ -1,35 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>Pi | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
 </head>
+
 <body>
 
+    <!-- Background -->
+
+    <div id="background">
+
+        <div class="gradient one"></div>
+        <div class="gradient two"></div>
+        <div class="gradient three"></div>
+
+        <canvas id="particles"></canvas>
+
+    </div>
+
+    <!-- Cursor -->
+
+    <div class="cursor"></div>
+
+    <!-- Navbar -->
+
     <header>
-        <div class="logo">My Website</div>
+
+        <div class="logo">
+            PI
+        </div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
         </nav>
+
     </header>
 
-    <section class="hero">
-        <h1>Welcome.</h1>
-        <p>This website is hosted completely free using GitHub Pages.</p>
+    <!-- Hero -->
 
-        <button id="button">
-            Learn More
-        </button>
+    <section id="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                SOFTWARE ENGINEER
+            </div>
+
+            <h1>
+
+                Building<br>
+
+                <span class="gradient-text">
+                    Beautiful
+                </span>
+
+                Software.
+
+            </h1>
+
+            <p>
+
+                Creating immersive digital experiences with modern web
+                technologies, elegant design and polished interactions.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="primary">
+                    View Work
+                </a>
+
+                <a href="#contact" class="secondary">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll">
+
+            Scroll
+
+        </div>
+
     </section>
 
-    <script src="script.js"></script>
+    <!-- About -->
+
+    <section id="about">
+
+        <h2>About</h2>
+
+        <p>
+
+            I'm passionate about crafting software that feels as good
+            as it looks.
+
+            I love building responsive interfaces, solving difficult
+            problems, and creating delightful user experiences.
+
+        </p>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skill-grid">
+
+            <div class="skill">Python</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Liquid</div>
+            <div class="skill">Git</div>
+            <div class="skill">Shopify</div>
+            <div class="skill">React</div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>Featured Projects</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Project One</h3>
+
+                <p>
+
+                    Beautiful animated portfolio experience.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Project Two</h3>
+
+                <p>
+
+                    Interactive UI built with modern technologies.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Project Three</h3>
+
+                <p>
+
+                    Creative coding experiment.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Let's Create Something Great</h2>
+
+        <a href="mailto:hello@example.com" class="contact-button">
+
+            Get In Touch
+
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Pi
+
+    </footer>
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+    <!-- Vanilla Tilt -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+    <!-- Typed.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
 
 </body>
+
 </html>
