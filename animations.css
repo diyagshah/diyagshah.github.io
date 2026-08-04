@@ -1,1 +1,609 @@
+/* ===========================================================
+   ANIMATIONS.CSS
+   Premium Animation Pack
+=========================================================== */
 
+/* -----------------------------
+   Cursor
+----------------------------- */
+
+.cursor{
+
+    position:fixed;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(0,220,255,.9);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    transition:
+        width .25s,
+        height .25s,
+        border .25s,
+        background .25s;
+
+    z-index:999999;
+
+    mix-blend-mode:screen;
+
+    box-shadow:
+        0 0 20px #00d9ff,
+        0 0 40px rgba(0,217,255,.35);
+
+}
+
+.cursor.grow{
+
+    width:65px;
+    height:65px;
+
+    background:
+        rgba(0,217,255,.08);
+
+    border-color:white;
+
+}
+
+/* -----------------------------
+   Floating Hero
+----------------------------- */
+
+.hero-content{
+
+    animation:
+        heroFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:
+            translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+/* -----------------------------
+   Scroll Indicator
+----------------------------- */
+
+.scroll{
+
+    position:absolute;
+
+    bottom:50px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    color:#88dfff;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    opacity:.7;
+
+    animation:
+        bounce 2s infinite;
+
+}
+
+.scroll::after{
+
+    content:"";
+
+    display:block;
+
+    width:2px;
+
+    height:55px;
+
+    margin:12px auto 0;
+
+    background:
+        linear-gradient(
+            transparent,
+            #44d9ff,
+            transparent
+        );
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:
+            translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:
+            translate(-50%,12px);
+
+    }
+
+}
+
+/* -----------------------------
+   Aurora Motion
+----------------------------- */
+
+.gradient{
+
+    animation:
+        auroraMove 18s ease-in-out infinite;
+
+}
+
+.gradient.two{
+
+    animation-duration:24s;
+
+}
+
+.gradient.three{
+
+    animation-duration:30s;
+
+}
+
+@keyframes auroraMove{
+
+    0%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+    25%{
+
+        transform:
+            translate(120px,-80px)
+            scale(1.25);
+
+    }
+
+    50%{
+
+        transform:
+            translate(-60px,100px)
+            scale(.92);
+
+    }
+
+    75%{
+
+        transform:
+            translate(80px,30px)
+            scale(1.15);
+
+    }
+
+    100%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+}
+
+/* -----------------------------
+   Noise Overlay
+----------------------------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.05;
+
+    background-image:
+
+        radial-gradient(circle,#fff 1px,transparent 1px);
+
+    background-size:
+
+        5px 5px;
+
+    animation:
+
+        grain .25s steps(8) infinite;
+
+}
+
+@keyframes grain{
+
+    0%{
+
+        transform:
+            translate(0);
+
+    }
+
+    20%{
+
+        transform:
+            translate(-2%,1%);
+
+    }
+
+    40%{
+
+        transform:
+            translate(2%,-2%);
+
+    }
+
+    60%{
+
+        transform:
+            translate(-1%,2%);
+
+    }
+
+    80%{
+
+        transform:
+            translate(1%,-1%);
+
+    }
+
+    100%{
+
+        transform:
+            translate(0);
+
+    }
+
+}
+
+/* -----------------------------
+   Glass Shine
+----------------------------- */
+
+.card{
+
+    overflow:hidden;
+
+}
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-160%;
+
+    top:-60%;
+
+    width:80%;
+
+    height:220%;
+
+    transform:
+        rotate(25deg);
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(255,255,255,.28),
+
+            transparent
+
+        );
+
+}
+
+.card:hover::after{
+
+    animation:
+
+        shine .9s forwards;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-160%;
+
+    }
+
+    to{
+
+        left:220%;
+
+    }
+
+}
+
+/* -----------------------------
+   Neon Pulse
+----------------------------- */
+
+.primary{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00d9ff,
+
+            #8f4dff,
+
+            #00d9ff
+
+        );
+
+    background-size:300%;
+
+    z-index:-2;
+
+    animation:
+
+        pulseGradient 6s linear infinite;
+
+}
+
+@keyframes pulseGradient{
+
+    from{
+
+        background-position:0;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
+
+}
+
+/* -----------------------------
+   Section Fade
+----------------------------- */
+
+section{
+
+    transition:
+
+        opacity .8s,
+
+        transform .8s;
+
+}
+
+/* -----------------------------
+   Floating Skills
+----------------------------- */
+
+.skill:nth-child(odd){
+
+    animation:
+
+        floatA 5s ease-in-out infinite;
+
+}
+
+.skill:nth-child(even){
+
+    animation:
+
+        floatB 7s ease-in-out infinite;
+
+}
+
+@keyframes floatA{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatB{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* -----------------------------
+   Gradient Text Glow
+----------------------------- */
+
+.gradient-text{
+
+    text-shadow:
+
+        0 0 18px rgba(0,217,255,.3),
+
+        0 0 45px rgba(0,217,255,.25),
+
+        0 0 90px rgba(0,217,255,.2);
+
+}
+
+/* -----------------------------
+   Cards Idle Animation
+----------------------------- */
+
+.card{
+
+    animation:
+
+        idleCard 10s ease-in-out infinite;
+
+}
+
+.card:nth-child(2){
+
+    animation-delay:-3s;
+
+}
+
+.card:nth-child(3){
+
+    animation-delay:-6s;
+
+}
+
+@keyframes idleCard{
+
+    0%{
+
+        transform:
+            rotateZ(0deg);
+
+    }
+
+    50%{
+
+        transform:
+            rotateZ(.4deg);
+
+    }
+
+    100%{
+
+        transform:
+            rotateZ(0deg);
+
+    }
+
+}
+
+/* -----------------------------
+   Footer Glow
+----------------------------- */
+
+footer{
+
+    position:relative;
+
+}
+
+footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:250px;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            #00d9ff,
+
+            transparent
+
+        );
+
+}
