@@ -356,28 +356,6 @@ window.addEventListener("scroll",()=>{
 
 });
 
-// -----------------------------------------------------
-// RANDOM FLOATING ANIMATION
-// -----------------------------------------------------
-
-gsap.utils.toArray(".skill,.card").forEach(item=>{
-
-    gsap.to(item,{
-
-        y:gsap.utils.random(-8,8),
-
-        duration:gsap.utils.random(3,6),
-
-        repeat:-1,
-
-        yoyo:true,
-
-        ease:"sine.inOut"
-
-    });
-
-});
-
 // =====================================================
 // END
 // =====================================================

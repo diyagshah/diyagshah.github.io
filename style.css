@@ -448,7 +448,10 @@ section h2{
 
     position:absolute;
 
-    inset:-150%;
+    top:-150%;
+    left:-150%;
+    width:400%;
+    height:400%;
 
     background:
         linear-gradient(
@@ -458,15 +461,17 @@ section h2{
             transparent
         );
 
-    transform:rotate(25deg);
+    transform:rotate(25deg) translateX(-60%);
 
     transition:.8s;
+
+    pointer-events:none;
 
 }
 
 .card:hover::before{
 
-    left:160%;
+    transform:rotate(25deg) translateX(60%);
 
 }
 
